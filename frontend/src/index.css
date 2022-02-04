@@ -10,10 +10,38 @@ body {
 header {
   background: blue;
   padding: 1rem;
+  overflow: hidden;
 }
 
 header a {
   color: white;
   font-weight: bold;
   text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}
+
+.bike-photo {
+  height: 150px;
+  width: 300px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  border: 1px black;
+}
+
+.product img {
+  width: 100%;
+}
+
+.product-info {
+  padding: 1rem;
 }
