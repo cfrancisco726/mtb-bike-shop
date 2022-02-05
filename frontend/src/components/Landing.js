@@ -40,28 +40,34 @@ function Landing() {
   return (
     <div>
       <h1>Products</h1>
-      <div className="products">
-        {products.map((product) => (
-          <div className="product" key={product.slug}>
-            <Link to={`/product/${product.slug}`}>
-              <img
-                className="bike-photo"
-                src={product.image}
-                alt={product.name}
-              />
-            </Link>
-            <div className="product-info">
+      {loading ? (
+        <div>Loading...</div>
+      ) : error ? (
+        <div>{error}</div>
+      ) : (
+        <div className="products">
+          {products.map((product) => (
+            <div className="product" key={product.slug}>
               <Link to={`/product/${product.slug}`}>
-                <p>{product.name}</p>
+                <img
+                  className="bike-photo"
+                  src={product.image}
+                  alt={product.name}
+                />
               </Link>
-              <p>{product.brand}</p>
-              <p>${product.price}</p>
-              <p>{product.year}</p>
-              <button>add to cart</button>
+              <div className="product-info">
+                <Link to={`/product/${product.slug}`}>
+                  <p>{product.name}</p>
+                </Link>
+                <p>{product.brand}</p>
+                <p>${product.price}</p>
+                <p>{product.year}</p>
+                <button>add to cart</button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
