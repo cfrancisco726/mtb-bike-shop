@@ -1,0 +1,61 @@
+const data = {
+  products: [
+    {
+      _id: "1",
+      name: "stump jumper",
+      model: "evo",
+      year: "2022",
+      build: "s works",
+      color: "black",
+      brand: "specialized",
+      category: "bikes",
+      price: "$10,000",
+      image: "/images/tallboy.png",
+      slug: "1",
+    },
+
+    {
+      _id: "2",
+      name: "tallboy",
+      model: "C",
+      year: "2022",
+      build: "R",
+      brand: "Santa Cruz",
+      category: "bikes",
+      price: "5,000",
+      countInStock: 10,
+      image: "/images/stump_jumper_evo_sworks.png",
+      slug: "2",
+    },
+    {
+      _id: "3",
+      name: "stump jumper",
+      model: "evo",
+      year: "2022",
+      build: "s works",
+      color: "black",
+      brand: "specialized",
+      category: "bikes",
+      price: "10,000",
+      countInStock: 10,
+      image: "/images/tallboy.png",
+      slug: "3",
+    },
+
+    {
+      _id: "4",
+      name: "tallboy",
+      model: "C",
+      year: "2022",
+      build: "R",
+      brand: "Santa Cruz",
+      category: "bikes",
+      price: "$5,000",
+      countInStock: 10,
+      image: "/images/stump_jumper_evo_sworks.png",
+      slug: "4",
+    },
+  ],
+};
+
+export default data;
