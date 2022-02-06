@@ -7,22 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  background: blue;
-  padding: 1rem;
-  overflow: hidden;
+.site-container {
+  min-height: 100vh;
 }
-
-header a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 main {
-  padding: 1rem;
+  flex: 1;
 }
 
+.btn-primary {
+  background-color: green;
+}
 .bike-photo {
   height: 150px;
   width: 300px;
@@ -44,4 +38,8 @@ main {
 
 .product-info {
   padding: 1rem;
+}
+
+.img-large {
+  max-width: 100%;
 }
