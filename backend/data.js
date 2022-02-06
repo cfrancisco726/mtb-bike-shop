@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      id: 1,
+      _id: "1",
       name: "stump jumper",
       model: "evo",
       year: "2022",
@@ -15,7 +15,7 @@ const data = {
     },
 
     {
-      id: 2,
+      _id: "2",
       name: "tallboy",
       model: "C",
       year: "2022",
@@ -28,7 +28,7 @@ const data = {
       slug: "2",
     },
     {
-      id: 3,
+      _id: "3",
       name: "stump jumper",
       model: "evo",
       year: "2022",
@@ -43,7 +43,7 @@ const data = {
     },
 
     {
-      id: 4,
+      _id: "4",
       name: "tallboy",
       model: "C",
       year: "2022",
