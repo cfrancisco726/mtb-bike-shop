@@ -24,6 +24,8 @@ function Product({ product }) {
       payload: { ...item, quantity },
     });
   };
+
+  console.log("count", product.countInStock);
   return (
     <Card>
       <Link to={`/product/${product.slug}`}>
@@ -37,7 +39,13 @@ function Product({ product }) {
         <Card.Text>{product.brand}</Card.Text>
         <Card.Text>${product.price}</Card.Text>
         <Card.Text>{product.year}</Card.Text>
-        <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
+        {product.countInStock === 0 ? (
+          <Button variant="light" disabled>
+            out of stock
+          </Button>
+        ) : (
+          <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
+        )}
       </Card.Body>
     </Card>
   );

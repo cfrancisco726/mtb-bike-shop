@@ -10,6 +10,7 @@ const data = {
       brand: "specialized",
       category: "bikes",
       price: 7000,
+      countInStock: 10,
       image: "/images/tallboy.png",
       slug: "1",
     },
