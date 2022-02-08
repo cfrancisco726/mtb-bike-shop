@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Landing from "./components/Landing";
 import ProductPage from "./components/ProductPage";
+import SignIn from "./components/SignInPage";
 import NavBar from "react-bootstrap/NavBar";
 import Nav from "react-bootstrap/Nav";
 import Badge from "react-bootstrap/Badge";
@@ -44,6 +45,7 @@ function App() {
             <Routes>
               <Route path="/product/:slug" element={<ProductPage />}></Route>
               <Route path="/" element={<Landing />} />
+              <Route path="/signin" element={<SignIn />} />
               <Route path="/cart" element={<CartPage />} />
             </Routes>
           </Container>
