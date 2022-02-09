@@ -14,6 +14,7 @@ import { Store } from "./Store";
 import CartPage from "./components/CartPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ShippingPage from "./components/ShippingPage";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -77,9 +78,10 @@ function App() {
           <Container className="mt-3">
             <Routes>
               <Route path="/product/:slug" element={<ProductPage />}></Route>
-              <Route path="/" element={<Landing />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/cart" element={<CartPage />} />
+              <Route path="/shipping" element={<ShippingPage />} />
+              <Route path="/" element={<Landing />} />
             </Routes>
           </Container>
         </main>
