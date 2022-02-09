@@ -6,6 +6,9 @@ import Button from "react-bootstrap/Button";
 import { Helmet } from "react-helmet-async";
 import Axios from "axios";
 import { Store } from "../Store";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
+import { getError } from "../utils";
 
 function SignInPage() {
   const navigate = useNavigate();
@@ -17,6 +20,7 @@ function SignInPage() {
   const [password, setPassword] = useState("");
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { userInfo } = state;
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -29,10 +33,14 @@ function SignInPage() {
       localStorage.setItem("userInfo", JSON.stringify(data));
       navigate(redirect || "/");
     } catch (err) {
-      alert("Invalid email or password");
+      toast.error(getError(err));
     }
   };
-
+  useEffect(() => {
+    if (userInfo) {
+      navigate(redirect);
+    }
+  }, [navigate, redirect, userInfo]);
   return (
     <Container className="small-container">
       <Helmet>
