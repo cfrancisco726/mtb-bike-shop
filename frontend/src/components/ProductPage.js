@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect, useReducer, useContext } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import LoadingBox from "./LoadingBox";
 import MessageBox from "./MessageBox";
+
 import { Helmet } from "react-helmet-async";
 import logger from "use-reducer-logger";
 import { Store } from "../Store";
@@ -27,6 +28,7 @@ const reducer = (state, action) => {
   }
 };
 function ProductPage() {
+  const navigate = useNavigate();
   const params = useParams();
   const { slug } = params;
 
@@ -62,8 +64,10 @@ function ProductPage() {
     }
     ctxDispatch({
       type: "CART_ADD_ITEM",
-      payload: { ...product, quantity: 1 },
+      payload: { ...product, quantity },
     });
+
+    navigate("/cart");
   };
   return loading ? (
     <LoadingBox />
