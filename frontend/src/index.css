@@ -51,3 +51,13 @@ main {
 .small-container {
   max-width: 600px;
 }
+
+.checkout-steps > div {
+  border-bottom: 0.2rem solid grey;
+  color: color;
+}
+
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid blue;
+  color: blue;
+}

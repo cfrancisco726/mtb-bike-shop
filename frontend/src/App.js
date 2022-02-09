@@ -2,10 +2,10 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Landing from "./components/Landing";
 import ProductPage from "./components/ProductPage";
 import SignIn from "./components/SignInPage";
+import SignUp from "./components/SignUpPage";
 import NavBar from "react-bootstrap/NavBar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
-
 import Badge from "react-bootstrap/Badge";
 import Container from "react-bootstrap/Container";
 import { LinkContainer } from "react-router-bootstrap";
@@ -15,6 +15,8 @@ import CartPage from "./components/CartPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ShippingPage from "./components/ShippingPage";
+import PaymentPage from "./components/PaymentPage";
+import PlaceOrderPage from "./components/PlaceOrderPage";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -23,6 +25,8 @@ function App() {
   const signoutHandler = () => {
     ctxDispatch({ type: "USER_SIGNOUT" });
     localStorage.removeItem("userInfo");
+    localStorage.removeItem("shippingAddress");
+    localStorage.removeItem("paymentMethod");
   };
 
   return (
@@ -79,8 +83,12 @@ function App() {
             <Routes>
               <Route path="/product/:slug" element={<ProductPage />}></Route>
               <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/placeorder" element={<PlaceOrderPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/shipping" element={<ShippingPage />} />
+              <Route path="/payment" element={<PaymentPage />} />
+
               <Route path="/" element={<Landing />} />
             </Routes>
           </Container>
