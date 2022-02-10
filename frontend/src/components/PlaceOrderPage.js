@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CheckoutSteps from "./CheckoutSteps";
 import { Helmet } from "react-helmet-async";
 import Row from "react-bootstrap/Row";
@@ -11,11 +11,30 @@ import { useContext } from "react";
 import { Store } from "../Store";
 
 export default function PlaceOrderPage() {
+  const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
+
+  const round2 = (num) => Math.round(num * 100 + Number.EPSILON) / 100;
+  cart.itemsPrice = round2(
+    cart.cartItems.reduce((a, c) => a + c.quantity * c.price, 0)
+  );
+  cart.shippingPrice = cart.itemsPrice > 1000 ? round2(0) : round2(10);
+  cart.taxPrice = round2(0.085 * cart.itemsPrice);
+  cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
+
+  const placeOrderHandler = async () => {};
+
+  useEffect(() => {
+    if (!cart.paymentMethod) {
+      navigate("/payment");
+    }
+  }, [cart, navigate]);
+
+  console.log("cart", cart);
   return (
     <div>
-      <CheckoutSteps step1 step2 step3></CheckoutSteps>
+      <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
       <Helmet>
         <title>Preview Order</title>
       </Helmet>
@@ -45,7 +64,7 @@ export default function PlaceOrderPage() {
               <Link to="/payment">Edit</Link>
             </Card.Body>
           </Card>
-          {/* <Card className="mb-3">
+          <Card className="mb-3">
             <Card.Body>
               <Card.Title>Items</Card.Title>
               <ListGroup variant="flush">
@@ -61,15 +80,73 @@ export default function PlaceOrderPage() {
                         <Link to={`/product/${item.slug}`}>{item.name}</Link>
                       </Col>
                       <Col md={3}>
-                        <span>{item.quanity}</span>
+                        <span>
+                          quantity:
+                          {item.quantity}
+                        </span>
                       </Col>
-                      <Col md={3}>{item.price}</Col>
+                      <Col md={3}>${item.price}</Col>
                     </Row>
                   </ListGroup.Item>
                 ))}
               </ListGroup>
+              <Link to="/cart"></Link>
             </Card.Body>
-          </Card> */}
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card>
+            <Card.Body>
+              <Card.Title>Order Summary</Card.Title>
+              <ListGroup variant="flush">
+                <ListGroup.Item>
+                  <Row>
+                    <Col>Items</Col>
+                    <Col>${cart.itemsPrice.toLocaleString("en-US")}</Col>
+                  </Row>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <Row>
+                    <Col>Shipping</Col>
+                    <Col>
+                      ${cart.shippingPrice.toFixed(2).toLocaleString("en-US")}
+                    </Col>
+                  </Row>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <Row>
+                    <Col>Tax</Col>
+                    <Col>
+                      ${cart.taxPrice.toFixed(2).toLocaleString("en-US")}
+                    </Col>
+                  </Row>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <Row>
+                    <Col>
+                      <strong>Order Total</strong>
+                    </Col>
+                    <Col>
+                      <strong>
+                        ${cart.totalPrice.toFixed(2).toLocaleString("en-US")}
+                      </strong>
+                    </Col>
+                  </Row>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <div className="d-grid">
+                    <Button
+                      type="button"
+                      onClick={placeOrderHandler}
+                      disabled={cart.cartItems.length === 0}
+                    >
+                      Place Order
+                    </Button>
+                  </div>
+                </ListGroup.Item>
+              </ListGroup>
+            </Card.Body>
+          </Card>
         </Col>
       </Row>
     </div>
