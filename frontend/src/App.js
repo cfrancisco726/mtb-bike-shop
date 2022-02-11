@@ -5,12 +5,13 @@ import SignIn from "./components/SignInPage";
 import SignUp from "./components/SignUpPage";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import NavBar from "react-bootstrap/NavBar";
-import Nav from "react-bootstrap/Nav";
+
 import Badge from "react-bootstrap/Badge";
 import Container from "react-bootstrap/Container";
 import { LinkContainer } from "react-router-bootstrap";
 import { useContext } from "react";
 import { Store } from "./Store";
+import Nav from "react-bootstrap/Nav";
 import CartPage from "./components/CartPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
