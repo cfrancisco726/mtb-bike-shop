@@ -4,7 +4,7 @@ import ProductPage from "./components/ProductPage";
 import SignIn from "./components/SignInPage";
 import SignUp from "./components/SignUpPage";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Nav from "react-bootstrap/Nav";
+// import Nav from "react-bootstrap/Nav";
 import NavBar from "react-bootstrap/NavBar";
 
 import Badge from "react-bootstrap/Badge";
@@ -40,7 +40,7 @@ function App() {
               <LinkContainer to="/">
                 <NavBar.Brand>MTB-Bike-Shop</NavBar.Brand>
               </LinkContainer>
-              <Nav className="me-auto">
+              {/* <Nav className="me-auto">
                 <Link to="/cart" className="nav-link">
                   Cart
                   {cart.cartItems.length > 0 && (
@@ -75,7 +75,7 @@ function App() {
                     Sign in
                   </Link>
                 )}
-              </Nav>
+              </Nav> */}
             </Container>
           </NavBar>
         </header>
