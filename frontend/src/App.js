@@ -5,7 +5,7 @@ import SignIn from "./components/SignInPage";
 import SignUp from "./components/SignUpPage";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
-// import NavBar from "react-bootstrap/NavBar";
+import NavBar from "react-bootstrap/NavBar";
 
 import Badge from "react-bootstrap/Badge";
 import Container from "react-bootstrap/Container";
@@ -35,7 +35,7 @@ function App() {
       <div className="d-flex flex-column site-container">
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          {/* <NavBar bg="dark" variant="dark">
+          <NavBar bg="dark" variant="dark">
             <Container>
               <LinkContainer to="/">
                 <NavBar.Brand>MTB-Bike-Shop</NavBar.Brand>
@@ -77,7 +77,7 @@ function App() {
                 )}
               </Nav>
             </Container>
-          </NavBar> */}
+          </NavBar>
         </header>
         <main>
           <Container className="mt-3">
