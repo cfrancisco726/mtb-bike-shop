@@ -40,7 +40,7 @@ function Product({ product }) {
         <Card.Text>${product.price}</Card.Text>
         <Card.Text>{product.year}</Card.Text>
         {product.countInStock === 0 ? (
-          <Button variant="light" disabled>
+          <Button variant="primary" disabled>
             out of stock
           </Button>
         ) : (

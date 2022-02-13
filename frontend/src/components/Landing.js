@@ -48,7 +48,7 @@ function Landing() {
       <Helmet>
         <title>MTB bike shop</title>
       </Helmet>
-      <h1>Products</h1>
+      <h1>OUR PREMIUM BIKES</h1>
       {loading ? (
         <LoadingBox />
       ) : error ? (
@@ -57,7 +57,7 @@ function Landing() {
         <div className="products">
           <Row>
             {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3}>
+              <Col key={product.slug} sm={6} md={3} lg={3}>
                 <Product product={product} />
               </Col>
             ))}

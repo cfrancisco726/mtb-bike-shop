@@ -14,9 +14,6 @@ main {
   flex: 1;
 }
 
-.btn-primary {
-  background-color: green;
-}
 .bike-photo {
   height: 150px;
   width: 300px;
@@ -58,6 +55,6 @@ main {
 }
 
 .checkout-steps > div.active {
-  border-bottom: 0.2rem solid blue;
-  color: blue;
+  border-bottom: 0.2rem solid #229ae5;
+  color: #229ae5;
 }

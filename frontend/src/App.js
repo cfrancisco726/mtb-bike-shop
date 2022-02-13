@@ -38,7 +38,16 @@ function App() {
           <Navbar bg="dark" variant="dark">
             <Container>
               <LinkContainer to="/">
-                <Navbar.Brand>MTB-Bike-Shop</Navbar.Brand>
+                <Navbar.Brand>
+                  <img
+                    alt=""
+                    src="/public/images/logo.svg"
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                  />{" "}
+                  React Bootstrap
+                </Navbar.Brand>
               </LinkContainer>
               <Nav className="me-auto">
                 <Link to="/cart" className="nav-link">
