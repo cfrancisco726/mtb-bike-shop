@@ -6,7 +6,6 @@ import SignUp from "./components/SignUpPage";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
 import Badge from "react-bootstrap/Badge";
 import Container from "react-bootstrap/Container";
 import { LinkContainer } from "react-router-bootstrap";
@@ -18,6 +17,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ShippingPage from "./components/ShippingPage";
 import PaymentPage from "./components/PaymentPage";
 import PlaceOrderPage from "./components/PlaceOrderPage";
+import logo from "./mtb_logo/mtb_logo@2x.png";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -35,25 +35,24 @@ function App() {
       <div className="d-flex flex-column site-container">
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark">
+          <Navbar bg="secondary" variant="none">
             <Container>
               <LinkContainer to="/">
                 <Navbar.Brand>
                   <img
                     alt=""
-                    src="/public/images/logo.svg"
-                    width="30"
-                    height="30"
+                    src={logo}
+                    width="120"
+                    height="120"
                     className="d-inline-block align-top"
                   />{" "}
-                  React Bootstrap
                 </Navbar.Brand>
               </LinkContainer>
-              <Nav className="me-auto">
-                <Link to="/cart" className="nav-link">
+              <Nav className="me-auto ">
+                <Link to="/cart" className="nav-link text-white">
                   Cart
                   {cart.cartItems.length > 0 && (
-                    <Badge pill bg="danger">
+                    <Badge pill bg="info">
                       {cart.cartItems.reduce(
                         (total, current) => total + current.quantity,
                         0

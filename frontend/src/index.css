@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Manrope&family=Oswald:wght@600;700&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
+  font-family: "Manrope";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -57,4 +59,24 @@ main {
 .checkout-steps > div.active {
   border-bottom: 0.2rem solid #229ae5;
   color: #229ae5;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  color: white;
+}
+
+figcaption {
+  position: relative;
+  bottom: 20rem;
+  font-size: 3rem;
+  color: white;
+  margin: 0 2rem;
+}
+.hero {
+  margin-bottom: -4rem;
 }

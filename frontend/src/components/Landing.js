@@ -8,6 +8,8 @@ import Col from "react-bootstrap/Col";
 import LoadingBox from "./LoadingBox";
 import MessageBox from "./MessageBox";
 import { Helmet } from "react-helmet-async";
+import hero from "../hero/hero.png";
+import Container from "react-bootstrap/Container";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -45,10 +47,23 @@ function Landing() {
   }, []);
   return (
     <div>
+      <Container className="hero">
+        <figure className="position-relative">
+          <img alt="" src={hero} className="hero" />{" "}
+          <figcaption>Tough Terrain </figcaption>
+          <figcaption>
+            <strong>Mountain Biking</strong>
+          </figcaption>
+        </figure>
+      </Container>
+
       <Helmet>
         <title>MTB bike shop</title>
       </Helmet>
-      <h1>OUR PREMIUM BIKES</h1>
+      <Container className="text-center text-primary">
+        {" "}
+        <h1>OUR PREMIUM BIKES</h1>
+      </Container>
       {loading ? (
         <LoadingBox />
       ) : error ? (
@@ -57,7 +72,7 @@ function Landing() {
         <div className="products">
           <Row>
             {products.map((product) => (
-              <Col key={product.slug} sm={6} md={3} lg={3}>
+              <Col key={product.slug} sm={6} md={4} lg={4}>
                 <Product product={product} />
               </Col>
             ))}
