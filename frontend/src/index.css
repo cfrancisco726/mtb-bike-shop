@@ -16,6 +16,9 @@ main {
   flex: 1;
 }
 
+a:link {
+  text-decoration: none;
+}
 .bike-photo {
   height: 150px;
   width: 300px;
@@ -49,6 +52,7 @@ main {
 
 .small-container {
   max-width: 600px;
+  margin: auto;
 }
 
 .checkout-steps > div {
@@ -62,8 +66,8 @@ main {
 }
 
 .hero {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .navbar {
@@ -77,6 +81,10 @@ figcaption {
   color: white;
   margin: 0 2rem;
 }
-.hero {
-  margin-bottom: -4rem;
+
+@media (max-width: 375px) {
+  figcaption {
+    bottom: 3.8rem;
+    font-size: 1rem;
+  }
 }

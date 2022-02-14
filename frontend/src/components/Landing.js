@@ -47,7 +47,7 @@ function Landing() {
   }, []);
   return (
     <div>
-      <Container className="hero">
+      <div className="hero">
         <figure className="position-relative">
           <img alt="" src={hero} className="hero" />{" "}
           <figcaption>Tough Terrain </figcaption>
@@ -55,12 +55,12 @@ function Landing() {
             <strong>Mountain Biking</strong>
           </figcaption>
         </figure>
-      </Container>
+      </div>
 
       <Helmet>
         <title>MTB bike shop</title>
       </Helmet>
-      <Container className="text-center text-primary">
+      <Container className="text-center text-primary mt-3">
         {" "}
         <h1>OUR PREMIUM BIKES</h1>
       </Container>
@@ -69,7 +69,7 @@ function Landing() {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <div className="products">
+        <Container className="products">
           <Row>
             {products.map((product) => (
               <Col key={product.slug} sm={6} md={4} lg={4}>
@@ -77,7 +77,7 @@ function Landing() {
               </Col>
             ))}
           </Row>
-        </div>
+        </Container>
       )}
     </div>
   );

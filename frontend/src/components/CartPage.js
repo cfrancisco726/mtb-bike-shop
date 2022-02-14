@@ -9,6 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import MessageBox from "./MessageBox";
 import { Helmet } from "react-helmet-async";
 import axios from "axios";
+import Container from "react-bootstrap/esm/Container";
 
 function CartPage() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -38,7 +39,7 @@ function CartPage() {
   };
   console.log("cart items", cartItems);
   return (
-    <div>
+    <Container>
       <Helmet>
         <title>Shopping Cart</title>
       </Helmet>
@@ -131,7 +132,7 @@ function CartPage() {
         </Col>
         <Col md={4}></Col>
       </Row>
-    </div>
+    </Container>
   );
 }
 export default CartPage;

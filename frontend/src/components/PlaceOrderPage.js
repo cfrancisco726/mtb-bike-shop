@@ -9,6 +9,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { Store } from "../Store";
+import Container from "react-bootstrap/Container";
 
 export default function PlaceOrderPage() {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ export default function PlaceOrderPage() {
 
   console.log("cart", cart);
   return (
-    <div>
+    <Container>
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
       <Helmet>
         <title>Preview Order</title>
@@ -149,6 +150,6 @@ export default function PlaceOrderPage() {
           </Card>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 }

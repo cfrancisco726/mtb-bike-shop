@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 import { Store } from "../Store";
 import CheckoutSteps from "./CheckoutSteps";
+import Container from "react-bootstrap/Container";
 
 export default function ShippingPage() {
   const navigate = useNavigate();
@@ -55,12 +56,12 @@ export default function ShippingPage() {
   };
 
   return (
-    <div>
+    <Container>
       <Helmet>
         <title>Shipping Address</title>
       </Helmet>
       <CheckoutSteps step1 step2></CheckoutSteps>
-      <div className="container small-container">
+      <div className="small-container">
         <h1 className="my-3">Shipping Address</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="fullName">
@@ -110,6 +111,6 @@ export default function ShippingPage() {
           </div>
         </Form>
       </div>
-    </div>
+    </Container>
   );
 }

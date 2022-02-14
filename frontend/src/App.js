@@ -42,8 +42,8 @@ function App() {
                   <img
                     alt=""
                     src={logo}
-                    width="120"
-                    height="120"
+                    width="110"
+                    height="80"
                     className="d-inline-block align-top"
                   />{" "}
                 </Navbar.Brand>
@@ -88,7 +88,7 @@ function App() {
           </Navbar>
         </header>
         <main>
-          <Container className="mt-3">
+          <div className="">
             <Routes>
               <Route path="/product/:slug" element={<ProductPage />}></Route>
               <Route path="/signin" element={<SignIn />} />
@@ -100,7 +100,7 @@ function App() {
 
               <Route path="/" element={<Landing />} />
             </Routes>
-          </Container>
+          </div>
         </main>
         <footer>
           <div className="text-center">footer</div>

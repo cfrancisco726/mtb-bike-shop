@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import LoadingBox from "./LoadingBox";
 import MessageBox from "./MessageBox";
-
+import Container from "react-bootstrap/Container";
 import { Helmet } from "react-helmet-async";
 import logger from "use-reducer-logger";
 import { Store } from "../Store";
@@ -75,50 +75,52 @@ function ProductPage() {
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
-      <Row>
-        <Col md={6}>
-          <img
-            className="img-large"
-            src={product.image}
-            alt={product.name}
-          ></img>
-        </Col>
-        <Col mg={3}>
-          <ListGroup variant="flush">
-            <ListGroup.Item>
-              <Helmet>
-                <title>{product.name}</title>
-              </Helmet>
-              <h1>{product.name}</h1>
-            </ListGroup.Item>
-            <ListGroup.Item>Price: {product.price}</ListGroup.Item>
-            <ListGroup.Item>{product.year}</ListGroup.Item>
-            <ListGroup.Item>
-              <Row>
-                <Col>Status:</Col>
-                <Col>
-                  {product.countInStock > 0 ? (
-                    <Badge bg="success">In Stock</Badge>
-                  ) : (
-                    <Badge bg="danger">Unavailable</Badge>
-                  )}
-                </Col>
-              </Row>
-            </ListGroup.Item>
-          </ListGroup>
+      <Container>
+        <Row>
+          <Col md={6}>
+            <img
+              className="img-large"
+              src={product.image}
+              alt={product.name}
+            ></img>
+          </Col>
+          <Col mg={3}>
+            <ListGroup variant="flush">
+              <ListGroup.Item>
+                <Helmet>
+                  <title>{product.name}</title>
+                </Helmet>
+                <h1>{product.name}</h1>
+              </ListGroup.Item>
+              <ListGroup.Item>Price: {product.price}</ListGroup.Item>
+              <ListGroup.Item>{product.year}</ListGroup.Item>
+              <ListGroup.Item>
+                <Row>
+                  <Col>Status:</Col>
+                  <Col>
+                    {product.countInStock > 0 ? (
+                      <Badge bg="success">In Stock</Badge>
+                    ) : (
+                      <Badge bg="danger">Unavailable</Badge>
+                    )}
+                  </Col>
+                </Row>
+              </ListGroup.Item>
+            </ListGroup>
 
-          {product.countInStock > 0 && (
-            <ListGroup.Item>
-              <div className="d-grid">
-                <Button onClick={addToCartHandler} variant="primary">
-                  Add to Cart
-                </Button>
-              </div>
-            </ListGroup.Item>
-          )}
-        </Col>
-        <Col mg={3}></Col>
-      </Row>
+            {product.countInStock > 0 && (
+              <ListGroup.Item>
+                <div className="d-grid">
+                  <Button onClick={addToCartHandler} variant="primary">
+                    Add to Cart
+                  </Button>
+                </div>
+              </ListGroup.Item>
+            )}
+          </Col>
+          <Col mg={3}></Col>
+        </Row>
+      </Container>
     </div>
   );
 }
