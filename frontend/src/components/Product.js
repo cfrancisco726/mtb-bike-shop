@@ -27,11 +27,11 @@ function Product({ product }) {
 
   console.log("count", product.countInStock);
   return (
-    <Card>
+    <Card className="border-0">
       <Link to={`/product/${product.slug}`}>
         <img className="card-img-top" src={product.image} alt={product.name} />
       </Link>
-      <Card.Body>
+      <Card.Body className="border-0">
         <Link to={`/product/${product.slug}`}>
           <Card.Title>{product.name}</Card.Title>
         </Link>

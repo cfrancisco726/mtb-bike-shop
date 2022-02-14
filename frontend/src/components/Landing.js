@@ -60,7 +60,7 @@ function Landing() {
       <Helmet>
         <title>MTB bike shop</title>
       </Helmet>
-      <Container className="text-center text-primary mt-3">
+      <Container className="text-center text-primary mt-3 border-0">
         {" "}
         <h1>OUR PREMIUM BIKES</h1>
       </Container>
