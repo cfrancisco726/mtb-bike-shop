@@ -35,20 +35,25 @@ function App() {
       <div className="d-flex flex-column site-container">
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="secondary" variant="none">
-            <Container>
-              <LinkContainer to="/">
-                <Navbar.Brand>
-                  <img
-                    alt=""
-                    src={logo}
-                    width="110"
-                    height="80"
-                    className="d-inline-block align-top"
-                  />{" "}
-                </Navbar.Brand>
-              </LinkContainer>
-              <Nav className="me-auto ">
+          <Navbar
+            bg="secondary"
+            variant="light"
+            fixed="top"
+            style={{ padding: "10px 5.5%" }}
+          >
+            <LinkContainer to="/">
+              <Navbar.Brand>
+                <img
+                  alt=""
+                  src={logo}
+                  width="110"
+                  height="80"
+                  className="d-inline-block align-top"
+                />{" "}
+              </Navbar.Brand>
+            </LinkContainer>
+            <Navbar.Collapse>
+              <Navbar className="justify-content-end" style={{ width: "100%" }}>
                 <Link to="/cart" className="nav-link text-white">
                   Cart
                   {cart.cartItems.length > 0 && (
@@ -83,8 +88,8 @@ function App() {
                     Sign in
                   </Link>
                 )}
-              </Nav>
-            </Container>
+              </Navbar>
+            </Navbar.Collapse>
           </Navbar>
         </header>
         <main>

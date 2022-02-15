@@ -34,7 +34,7 @@ export default function PlaceOrderPage() {
 
   console.log("cart", cart);
   return (
-    <Container>
+    <Container className="border-0">
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
       <Helmet>
         <title>Preview Order</title>

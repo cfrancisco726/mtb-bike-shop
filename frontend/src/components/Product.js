@@ -27,7 +27,7 @@ function Product({ product }) {
 
   console.log("count", product.countInStock);
   return (
-    <Card className="border-0">
+    <Card className="p-4 m-4">
       <Link to={`/product/${product.slug}`}>
         <img className="card-img-top" src={product.image} alt={product.name} />
       </Link>
@@ -35,7 +35,6 @@ function Product({ product }) {
         <Link to={`/product/${product.slug}`}>
           <Card.Title>{product.name}</Card.Title>
         </Link>
-        <Card.Text>{product.brand}</Card.Text>
         <Card.Text>{product.brand}</Card.Text>
         <Card.Text>${product.price}</Card.Text>
         <Card.Text>{product.year}</Card.Text>

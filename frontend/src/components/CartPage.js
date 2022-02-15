@@ -55,7 +55,7 @@ function CartPage() {
               {cartItems.map((item) => (
                 <ListGroup.Item key={item._id}>
                   <Row className="align-items-center">
-                    <Col md={4}>
+                    <Col md={4} className="border-0">
                       <img
                         src={item.image}
                         alt={item.name}
