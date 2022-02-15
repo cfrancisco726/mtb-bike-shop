@@ -48,29 +48,31 @@ function NavBar() {
                 </Badge>
               )}
             </Link>
-            {userInfo ? (
-              <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
-                <LinkContainer to="/profile">
-                  <NavDropdown.Item>User Profile</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/orderhistory">
-                  <NavDropdown.Item>Order History</NavDropdown.Item>
-                </LinkContainer>
-                <NavDropdown.Divider />
+            <div className="sign-in">
+              {userInfo ? (
+                <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
+                  <LinkContainer to="/profile">
+                    <NavDropdown.Item>User Profile</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/orderhistory">
+                    <NavDropdown.Item>Order History</NavDropdown.Item>
+                  </LinkContainer>
+                  <NavDropdown.Divider />
 
-                <Link
-                  className="dropdown-item"
-                  to="#signout"
-                  onClick={signoutHandler}
-                >
-                  Sign out
+                  <Link
+                    className="dropdown-item"
+                    to="#signout"
+                    onClick={signoutHandler}
+                  >
+                    Sign out
+                  </Link>
+                </NavDropdown>
+              ) : (
+                <Link className="nav-link text-white" to="/signin">
+                  Sign in
                 </Link>
-              </NavDropdown>
-            ) : (
-              <Link className="nav-link" to="/signin">
-                Sign in
-              </Link>
-            )}
+              )}
+            </div>
           </Navbar>
         </Navbar.Collapse>
       </Navbar>

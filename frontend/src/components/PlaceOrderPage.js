@@ -137,6 +137,7 @@ export default function PlaceOrderPage() {
                 <ListGroup.Item>
                   <div className="d-grid">
                     <Button
+                      className="text-white"
                       type="button"
                       onClick={placeOrderHandler}
                       disabled={cart.cartItems.length === 0}

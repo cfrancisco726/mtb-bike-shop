@@ -64,8 +64,10 @@ function SignInPage() {
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
-        <div className="mb-3">
-          <Button type="submit">Sign In</Button>
+        <div className="mb-3 ">
+          <Button className="text-white" type="submit">
+            Sign In
+          </Button>
         </div>
         <div className="mb-3">
           New customer

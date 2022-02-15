@@ -88,7 +88,9 @@ function SignUpPage() {
           ></Form.Control>
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit">Sign Up</Button>
+          <Button className="text-white" type="submit">
+            Sign Up
+          </Button>
         </div>
         <div className="mb-3">
           ALready have an account?{" "}

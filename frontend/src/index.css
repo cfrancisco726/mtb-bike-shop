@@ -280,3 +280,7 @@ figcaption p {
 .riding {
   color: #8b5390;
 }
+
+#basic-nav-dropdown {
+  color: white !important;
+}
