@@ -121,6 +121,7 @@ function CartPage() {
                       variant="primary"
                       disabled={cartItems.length === 0}
                       onClick={checkoutHandler}
+                      className="text-white"
                     >
                       Proceed to Checkout
                     </Button>

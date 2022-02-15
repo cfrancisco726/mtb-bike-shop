@@ -111,7 +111,11 @@ function ProductPage() {
             {product.countInStock > 0 && (
               <ListGroup.Item className="product-detail">
                 <div className="d-grid">
-                  <Button onClick={addToCartHandler} variant="primary">
+                  <Button
+                    onClick={addToCartHandler}
+                    variant="primary"
+                    className="text-white"
+                  >
                     Add to Cart
                   </Button>
                 </div>

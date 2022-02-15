@@ -61,7 +61,9 @@ export default function PaymentPage() {
               />
             </div>
             <div className="mb-3">
-              <Button type="submit">Continue</Button>
+              <Button className="text-white" type="submit">
+                Continue
+              </Button>
             </div>
           </Form>
         </div>

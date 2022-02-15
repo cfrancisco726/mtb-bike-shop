@@ -105,7 +105,7 @@ export default function ShippingPage() {
             />
           </Form.Group>
           <div className="mb-3">
-            <Button variant="primary" type="submit">
+            <Button variant="primary" className="text-white" type="submit">
               Continue
             </Button>
           </div>
