@@ -17,7 +17,8 @@ import "react-toastify/dist/ReactToastify.css";
 import ShippingPage from "./components/ShippingPage";
 import PaymentPage from "./components/PaymentPage";
 import PlaceOrderPage from "./components/PlaceOrderPage";
-import logo from "./mtb_logo/mtb_logo@2x.png";
+// import logo from "./mtb_logo/mtb_logo@2x.png";
+import NavBar from "./components/NavBar";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -32,65 +33,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="d-flex flex-column site-container">
+      <div className="d-flex flex-column site-container style={{ position: fixed }}">
         <ToastContainer position="bottom-center" limit={1} />
-        <header>
-          <Navbar
-            bg="secondary"
-            variant="light"
-            fixed="top"
-            style={{ padding: "10px 5.5%" }}
-          >
-            <LinkContainer to="/">
-              <Navbar.Brand>
-                <img
-                  alt=""
-                  src={logo}
-                  width="110"
-                  height="80"
-                  className="d-inline-block align-top"
-                />{" "}
-              </Navbar.Brand>
-            </LinkContainer>
-            <Navbar.Collapse>
-              <Navbar className="justify-content-end" style={{ width: "100%" }}>
-                <Link to="/cart" className="nav-link text-white">
-                  Cart
-                  {cart.cartItems.length > 0 && (
-                    <Badge pill bg="info">
-                      {cart.cartItems.reduce(
-                        (total, current) => total + current.quantity,
-                        0
-                      )}
-                    </Badge>
-                  )}
-                </Link>
-                {userInfo ? (
-                  <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
-                    <LinkContainer to="/profile">
-                      <NavDropdown.Item>User Profile</NavDropdown.Item>
-                    </LinkContainer>
-                    <LinkContainer to="/orderhistory">
-                      <NavDropdown.Item>Order History</NavDropdown.Item>
-                    </LinkContainer>
-                    <NavDropdown.Divider />
-
-                    <Link
-                      className="dropdown-item"
-                      to="#signout"
-                      onClick={signoutHandler}
-                    >
-                      Sign out
-                    </Link>
-                  </NavDropdown>
-                ) : (
-                  <Link className="nav-link" to="/signin">
-                    Sign in
-                  </Link>
-                )}
-              </Navbar>
-            </Navbar.Collapse>
-          </Navbar>
+        <header className="style={{position:fixed}}">
+          <NavBar />
         </header>
         <main>
           <div className="">

@@ -60,7 +60,7 @@ function Landing() {
                 mountains. Adventure is in our DNA.
               </p>
               <div className="btn-container-hero">
-                <Button className="collection-btn text-white btn-lg p-3 fs-5">
+                <Button className="collection-btn text-white btn-lg p-3">
                   VIEW OUR COLLECTION
                 </Button>
               </div>
