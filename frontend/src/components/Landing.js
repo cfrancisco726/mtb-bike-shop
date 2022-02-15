@@ -104,7 +104,7 @@ function Landing() {
               "A BAD DAY ON A MOUNTAIN BIKE ALWAYS BEATS A GOOD DAY IN THE
               OFFICE"
             </p>
-            <p className="text-light">
+            <p className="riding">
               <strong> LET'S GO RIDING</strong>
             </p>
           </Row>
