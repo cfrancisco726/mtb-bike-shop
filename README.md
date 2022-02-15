@@ -35,11 +35,11 @@ Live demo [_here_](https://mtb-bike-shop.herokuapp.com/)
 
 ## Landing page
 
-![Example screenshot](./front/public/images/mountainbike-exclusives.png)
+![Example screenshot](./frontend/public/images/mountainbike-exclusives.png)
 
 ## product check out
 
-![Example screenshot](./front/public/images/mountainbike-checkout.png)
+![Example screenshot](./frontend/public/images/mountainbike-checkout.png)
 
 ## 🛠️ Installation Steps
 
