@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Mountain Bike Exclusives
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Responsive fullstack ecommerce application for fictious mountain bike business. You can add mountain bikes to cart. Create a login/profile. Select shipping, payment and checkout
 
-## Available Scripts
+Live demo [_here_](https://mtb-bike-shop.herokuapp.com/)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+- Create-React-App that connects to a NodeJS and Express backend. Communicates data from Mongo Atlas database.
+- Uses bcrypt for login and sign up
+- Uses react-router-dom to link to different pages
+- Uses react-router-hash-link to link to section of page
+- Add to cart feature with max inventory handling
+- state stored in local storage for cart and shipping form
+- error handling with all forms
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- redux hooks
+- MongodDB
+- NodeJS
+- ExpressJS
+- React Bootstrap
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Landing page with link to collection, cart, log in/sign out,
+- can view details of individual bike product
+- Shopping cart - can add and subtract items or delete all together
+- proceed to check out - if not logged in will direct you to sign in / sign up page
+- shipping page holds state in local storage
+- payment method option
+- checkout page with all shopping details
 
-### `npm run build`
+## Landing page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Example screenshot](./front/public/images/mountainbike-exclusives.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## product check out
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Example screenshot](./front/public/images/mountainbike-checkout.png)
 
-### `npm run eject`
+## 🛠️ Installation Steps
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Install dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Executing program
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+cd frontend
+npm start
+cd backend
+npm start
 
-## Learn More
+## Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created by [@cfrancisco726](http://www.carlofrancisco.com) - feel free to contact me!
