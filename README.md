@@ -25,7 +25,7 @@ Live demo [_here_](https://mtb-bike-shop.herokuapp.com/)
 
 ## Features
 
-- Landing page with link to collection, cart, log in/sign out,
+- Landing page with link to collection, cart, log in/sign up.
 - can view details of individual bike product
 - Shopping cart - can add and subtract items or delete all together
 - proceed to check out - if not logged in will direct you to sign in / sign up page
@@ -37,7 +37,7 @@ Live demo [_here_](https://mtb-bike-shop.herokuapp.com/)
 
 ![Example screenshot](./frontend/public/images/mountainbike-exclusives.png)
 
-## product check out
+## Product check out
 
 ![Example screenshot](./frontend/public/images/mountainbike-checkout.png)
 
@@ -51,10 +51,10 @@ npm install
 
 ### Executing program
 
-cd frontend
-npm start
-cd backend
-npm start
+- cd frontend
+- npm start
+- cd backend
+- npm start
 
 ## Contact
 
