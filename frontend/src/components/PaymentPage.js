@@ -24,8 +24,9 @@ export default function PaymentPage() {
   }, [shippingAddress, navigate]);
 
   const submitHandler = (e) => {
+    console.log("submit", paymentMethod);
     e.preventDefault();
-    ctxDispatch({ type: "SAVE_PAYMENT_METHOD", payload: paymentMethod });
+    ctxDispatch({ type: "SAVE_PAYMENT_METHOD", payload: paymentMethodName });
     localStorage.setItem("paymentMethod", paymentMethodName);
     navigate("/placeorder");
   };
