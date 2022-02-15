@@ -12,6 +12,7 @@ import hero from "../hero/hero.png";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { HashLink } from "react-router-hash-link";
+import Footer from "./Footer";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -94,6 +95,18 @@ function Landing() {
                 <Product product={product} />
               </Col>
             ))}
+          </Row>
+          <Row
+            className="text-center"
+            style={{ fontSize: "36px", padding: "0 20%" }}
+          >
+            <p className="text-dark">
+              "A BAD DAY ON A MOUNTAIN BIKE ALWAYS BEATS A GOOD DAY IN THE
+              OFFICE"
+            </p>
+            <p className="text-light">
+              <strong> LET'S GO RIDING</strong>
+            </p>
           </Row>
         </Container>
       )}

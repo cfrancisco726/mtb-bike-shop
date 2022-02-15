@@ -3,12 +3,7 @@ import Landing from "./components/Landing";
 import ProductPage from "./components/ProductPage";
 import SignIn from "./components/SignInPage";
 import SignUp from "./components/SignUpPage";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Badge from "react-bootstrap/Badge";
-import Container from "react-bootstrap/Container";
-import { LinkContainer } from "react-router-bootstrap";
+
 import { useContext } from "react";
 import { Store } from "./Store";
 import CartPage from "./components/CartPage";
@@ -17,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ShippingPage from "./components/ShippingPage";
 import PaymentPage from "./components/PaymentPage";
 import PlaceOrderPage from "./components/PlaceOrderPage";
-// import logo from "./mtb_logo/mtb_logo@2x.png";
+import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -54,7 +49,7 @@ function App() {
           </div>
         </main>
         <footer>
-          <div className="text-center">footer</div>
+          <Footer />
         </footer>
       </div>
     </BrowserRouter>

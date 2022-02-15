@@ -85,7 +85,7 @@ function ProductPage() {
             ></img>
           </Col>
           <Col mg={3}>
-            <ListGroup variant="flush">
+            <ListGroup variant="flush" className="product-detail">
               <ListGroup.Item>
                 <Helmet>
                   <title>{product.name}</title>
@@ -109,7 +109,7 @@ function ProductPage() {
             </ListGroup>
 
             {product.countInStock > 0 && (
-              <ListGroup.Item>
+              <ListGroup.Item className="product-detail">
                 <div className="d-grid">
                   <Button onClick={addToCartHandler} variant="primary">
                     Add to Cart
@@ -118,7 +118,6 @@ function ProductPage() {
               </ListGroup.Item>
             )}
           </Col>
-          <Col mg={3}></Col>
         </Row>
       </Container>
     </div>
