@@ -51,7 +51,7 @@ function Landing() {
   return (
     <div className="landing-container">
       <div className="hero">
-        <figure className="position-relative">
+        <figure className="position-relative mb-0">
           <img alt="" src={hero} className="hero" />{" "}
           <div className="landing-text-container">
             <figcaption className="lh-1">TOUGH TERRAIN</figcaption>
@@ -71,6 +71,23 @@ function Landing() {
             </figcaption>
           </div>
         </figure>
+        <div className="mobile-landing-section">
+          <div className="mobile-container">
+            <figcaption className="lh-1">TOUGH TERRAIN</figcaption>
+            <figcaption className="lh-2">
+              <strong>MOUNTAIN BIKING</strong>
+              <p>
+                We hand select our bikes to stand up to the most rugged
+                mountains. Adventure is in our DNA.
+              </p>
+              <HashLink to="/#hash">
+                <Button className="collection-btn text-white btn-lg p-3">
+                  VIEW OUR COLLECTION
+                </Button>
+              </HashLink>
+            </figcaption>
+          </div>
+        </div>
       </div>
 
       <Helmet>
@@ -97,8 +114,8 @@ function Landing() {
             ))}
           </Row>
           <Row
-            className="text-center"
-            style={{ fontSize: "36px", padding: "0 20%" }}
+            className="text-center phrase"
+            style={{ fontSize: "36px", padding: "0 10%" }}
           >
             <p className="text-dark">
               "A BAD DAY ON A MOUNTAIN BIKE ALWAYS BEATS A GOOD DAY IN THE
