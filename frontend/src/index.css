@@ -51,7 +51,7 @@ a:link {
 }
 
 .small-container {
-  max-width: 600px;
+  max-width: 600px !important;
   margin: auto;
 }
 

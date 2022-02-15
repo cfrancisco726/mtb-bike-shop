@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet-async";
 import hero from "../hero/hero.png";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import { HashLink } from "react-router-hash-link";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -59,11 +60,13 @@ function Landing() {
                 We hand select our bikes to stand up to the most rugged
                 mountains. Adventure is in our DNA.
               </p>
-              <div className="btn-container-hero">
-                <Button className="collection-btn text-white btn-lg p-3">
-                  VIEW OUR COLLECTION
-                </Button>
-              </div>
+              <HashLink to="/#hash">
+                <div className="btn-container-hero">
+                  <Button className="collection-btn text-white btn-lg p-3">
+                    VIEW OUR COLLECTION
+                  </Button>
+                </div>
+              </HashLink>
             </figcaption>
           </div>
         </figure>
@@ -72,7 +75,10 @@ function Landing() {
       <Helmet>
         <title>MTB bike shop</title>
       </Helmet>
-      <Container className="landing-container text-center text-primary mt-3 ">
+      <Container
+        id="hash"
+        className="landing-container text-center text-primary mt-3 "
+      >
         {" "}
         <h3>OUR PREMIUM BIKES</h3>
       </Container>
