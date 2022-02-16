@@ -15,9 +15,9 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <BrowserRouter>
-      <div className="d-flex flex-column site-container style={{ position: fixed }}">
+      <div className="d-flex flex-column site-container">
         <ToastContainer position="bottom-center" limit={1} />
-        <header className="style={{position:fixed}}">
+        <header>
           <NavBar />
         </header>
         <main>
