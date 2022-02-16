@@ -51,12 +51,12 @@ function NavBar() {
             <div className="sign-in">
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
-                  <LinkContainer to="/profile">
+                  {/* <LinkContainer to="/profile">
                     <NavDropdown.Item>User Profile</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to="/orderhistory">
                     <NavDropdown.Item>Order History</NavDropdown.Item>
-                  </LinkContainer>
+                  </LinkContainer> */}
                   <NavDropdown.Divider />
 
                   <Link
