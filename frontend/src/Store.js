@@ -20,9 +20,9 @@ const initialState = {
 };
 
 function reducer(state, action) {
-  console.log("action payload", action.payload);
-  console.log("action", action);
-  console.log("state", state);
+  console.log("store payload", action.payload);
+  console.log("store action", action);
+  console.log("store state", state);
 
   switch (action.type) {
     case "CART_ADD_ITEM":

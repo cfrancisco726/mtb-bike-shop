@@ -17,7 +17,7 @@ Live demo [_here_](https://mtb-bike-shop.herokuapp.com/)
 ## Technologies Used
 
 - React
-- redux hooks
+- Hooks
 - MongodDB
 - NodeJS
 - ExpressJS
